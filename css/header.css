@@ -1,0 +1,231 @@
+.header
+{
+  width: 100%;
+  height: 80px;
+  background-color: #0d0e0e;
+  display: flex;
+  border-bottom: 2px solid rgba(51,51,51,0.25);
+  align-items: center;
+  justify-content: space-around;
+}
+.header__button
+{
+  font-family: 'Lato', sans-serif;
+  color: #e4e2de;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.header__link
+{
+  color: #e4e2de;
+  text-decoration: none;
+}
+.header__button.header__button--riot
+{
+  padding: 0px 0px 0px 36px; 
+  display: flex;
+  align-items: center;
+}
+.header__button.header__button--riot svg
+{
+  fill: #e4e2de;
+}
+.header__button.header__button--riot:hover svg
+{
+  fill: #ff284d;
+}
+.header__logo
+{
+  margin: 0px 0px 0px 22px;
+}
+.header__menu
+{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.header__menu.header__menu--center
+{
+  height: 100%;
+  flex: 1;
+  flex-shrink: 0;
+}
+.header__menu.header__menu--center .header__item
+{
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.header__menu.header__menu--center .header__button:hover
+{
+  background-color: #60686c33;
+}
+.header__menu.header__menu--center .header__item p
+{
+  display: inline;
+}
+.header__menu.header__menu--center .header__logo svg
+{
+  pointer-events: none;
+  max-height: 26px;
+}
+.header__menu.header__menu--center .header__item:nth-of-type(2)
+{
+  margin-left: 18px
+}
+.header__menu.header__menu--center .header__button
+{
+  border-radius: 6.4px;
+  flex-shrink: 0;
+  margin: 0px 4px 0px  0px;
+  padding: 7.5px 16px;
+  letter-spacing: 1.04px;
+  line-height: 15.6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.header__underline
+{
+  display: none;
+}
+.header__menu.header__menu--center .header__item:hover .header__button .header__underline
+{
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #00a0ba;
+  position: absolute;
+  left: 0px;
+  bottom: 7px;
+  border-radius: 2px;
+}
+.header__menu.header__menu--center .header__button.header__button--drop:hover .header__underline
+{
+  border-radius: 2px 2px 0px 0px;
+}
+.header__drop
+{
+  display: none;
+}
+.header__drop .header__button.header__button--drop
+{
+  margin: 16px 16px 5px;
+  padding: 8px 16px;
+  color: #c5c0b8;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: none;
+}
+.header__menu.header__menu--center .header__item:hover .header__button.header__button--drop .header__drop
+{
+  border-radius: 2px 2px 0px 0px;
+  border-top: 4px solid #00a0ba;
+  list-style: none;
+  display: block;
+  position: absolute;
+  top: 67px;
+  left: 0px;
+  background-color: #1f2123;
+}
+.header__menu.header__menu--right
+{
+  height: 100%;
+  z-index: 2;
+  flex-shrink: 1;
+  background-color: #0d0e0e;
+}
+.header__search 
+{
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #60686c33;
+  max-width: 270px;
+  min-width: 45px;
+  height: 44px;
+  border-radius: 25.6px;
+}
+.header__search .header__input
+{
+  width: 0px;
+  height: 40px;
+  margin: -8px 10px;
+  background-color: transparent;
+  border: none;
+  color: #e4e2de;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.4px;
+  letter-spacing: 1.5;
+  outline: none;
+  transition: width ease 1s;
+}
+.header__search .header__input.header__input--open
+{
+  width: 250px;
+  padding: 0px 26px;
+}
+.header__search .header__button
+{
+  fill: #e4e2de;
+  width: 45px;
+  height: 44px;
+}
+.header__search .header__button svg
+{
+  width: 22px;
+  height: 22px;
+}
+.header__search .header__button.header__button--search
+{
+  position: absolute;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__search .header__button.header__button--close
+{
+  display: block;
+  position: absolute;
+  right: 0px;
+}
+.header__search .header__button.header__button--close.header__button--hidden
+{
+  display: none;
+}
+
+.header__search .header__button.header__button--close svg
+{
+  width: 45px;
+  height: 44px;
+}
+.header__menu.header__menu--right .header__button.header__button--global
+{
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__menu.header__menu--right .header__button--user
+{
+  padding: 0px 6px; 
+}
+.header__menu.header__menu--right .header__button--user a
+{
+  padding: 8px 16px;
+  border-radius: 6.4px;
+  background-color: #60686c33;
+}
+.header__menu.header__menu--right .header__button--user:last-of-type a
+{
+  background-color: #099db5;
+}
+
+
