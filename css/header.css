@@ -10,6 +10,7 @@
 }
 .header__button
 {
+  cursor: pointer;
   font-family: 'Lato', sans-serif;
   color: #e4e2de;
   font-weight: bold;
@@ -47,11 +48,15 @@
 }
 .header__menu.header__menu--center
 {
+  width: 100%;
   height: 100%;
   flex: 1;
-  flex-shrink: 0;
 }
-.header__menu.header__menu--center .header__item
+.header__menu .header__box
+{
+  display: flex;
+}
+.header__menu .header__item
 {
   flex-shrink: 0;
   height: 100%;
@@ -59,6 +64,11 @@
   align-items: center;
   justify-content: center;
   position: relative;
+}
+.header__menu > .header__item
+{
+  position: relative;
+  left: 0;
 }
 .header__menu.header__menu--center .header__button:hover
 {
@@ -227,5 +237,158 @@
 {
   background-color: #099db5;
 }
+.riotbar
+{
+  font-family: 'Lato', sans-serif;
+  display: block;
+  z-index: 3;
+  background-color: #f9f9f9;
+  top: 0px;
+  position: absolute;
+  width: 100%;
+  clip-path: polygon(0% 0%, 100% 0, 100% 47%, 23% 64%, 0 51%);
+  transition: clip-path cubic-bezier(0, 0, 0, 1.61) 0.8s;
+}
+.riotbar.riotbar--anime
+{
+  clip-path: polygon(0% 0%, 100% 0, 100% 100%, 38% 100%, 0 100%);
+}
+.riotbar.riotbar--anime .riotbar__wrapper
+{
+  opacity: 1;
+}
+.riotbar.riotbar--hidden
+{
+  display: none;
+}
+.riotbar__menu
+{
+  display: flex;
+  align-items: center;
+  padding: 0px 32px 0px 0px;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+}
+.riotbar__menu:nth-last-child()
+{ 
+  background-color: #60686c33;
+}
+.riotbar__menu .header__button svg:first-of-type
+{
+  fill: #000000;
+}
+.riotbar__menu .header__button svg:last-of-type
+{
+  transform: rotate(180deg);
+  fill: #7e7e7e;
+}
+.riotbar__menu .header__button:hover svg:first-of-type, .riotbar__menu .header__button:hover svg:last-of-type
+{
+  fill: #eb0029;
+}
+.riotbar__body
+{
+  width: 100%;
+  padding: 0px 10px 32px 10px;
+}
+.riotbar__wrapper
+{
+  width: 100%;
+  padding: 0px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.3s ease-out 0.3s;
+}
+.riotbar__content
+{
+  width: 918px;
+  height: 420px;
+  columns: 10em 3;
+  gap: 10px;
+}
+.riotbar__section
+{
+  width: 100%;
+  padding-bottom: 16px;
+  break-inside: avoid;
+}
+.riotbar__section .riotbar__title
+{
+  background-color: #bababa1a;
+  border-radius: 6.4px;
+  font-size: 13px;
+  height: 32px;
+  font-weight: 700;
+  letter-spacing: 1.04px;
+  line-height: 15.6px;
+  padding: 8px 12px 8px 16px;
+  text-transform: uppercase;
+}
+.riotbar__links
+{
+  list-style: none;
+  line-height: 18.4px;
+  text-size-adjust: 100%;
+  color: #111111;
+}
+.riotbar__item
+{
+  padding: 8px 16px;
+  margin: 4px 0px;
+  cursor: pointer;
+}
+.riotbar__item:hover
+{
+  background-color: #bababa4d;
+  border-radius: 6.4px;
 
-
+}
+.riotbar__item a
+{
+  color: #4a4a4a;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  line-height: 15.6px;
+  text-size-adjust: 100%;
+}
+.riotbar__content.riotbar__content--right
+{
+  columns: 1;
+}
+.riotbar__section.riotbar__section--default
+{
+  display: flex;
+  gap: 16px;
+  padding-bottom: 0px;
+}
+.riotbar__card
+{
+  width: 100%;
+  max-width: 452px;
+}
+.riotbar__card a
+{
+  display: block;
+  text-decoration: none;
+}
+.riotbar__card img
+{
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+.riotbar__card span
+{
+  margin-top: 16px;
+  display: block;
+  color: #0a0a0a;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.39px;
+  line-height: 15.6px;
+  text-size-adjust: 100%;
+}
